@@ -10,7 +10,7 @@ output:
 
 # About me
 
-```{r about, echo = FALSE, fig.height = 4}
+```{r about, echo = FALSE, fig.height = 4, warning=FALSE}
 library(leaflet)
 plcs <- matrix(c(42.2508564, -87.8278465,
                     47.65469, -122.3183384,
@@ -22,7 +22,7 @@ colnames(plcs) <- c("lat", "lng")
 Icons <- iconList(
   lfc = makeIcon("lfc.png", "lfc.png", 75, 66),
   UW = makeIcon("UW.png", "UW.png", 90, 60),
-  nci = makeIcon("nci.png", "ki.png", 80, 60),
+  nci = makeIcon("nci.png", "nci.png", 80, 60),
   ki = makeIcon("ki.png", "ki.png", 84, 52)
 )
 plcs$icon <- Icons
@@ -42,7 +42,6 @@ Interests:
 # At the lab?
 
 ![lab1](knitr/img/lab1.png)\ 
-![lab1](bmjcancer.png)\
 
 # At the computer?
 
@@ -387,7 +386,10 @@ Once a paper gets published, occasionally people want to use or extend the metho
 # Final thoughts
 
 - These tools can have benefits if used properly
-    + but not ideally suited nor designed for our jobs
+    + but not ideally suited nor designed for the entire workflow
+- More complex than document versioning and tracking
+    + Google docs, dropbox, overleaf? 
+    
 - Occassionally save my butt and make my life easier
     + setup and project management can be a pain
 - The bare minimum we should expect is to be able to replicate published results
